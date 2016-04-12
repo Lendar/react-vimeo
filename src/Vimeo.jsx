@@ -63,6 +63,7 @@ export default React.createClass({
       }, {});
 
     defaults.className = 'vimeo';
+    defaults.vimeoOptions = 'autoplay=1';
     return defaults;
   },
 
@@ -167,7 +168,7 @@ export default React.createClass({
   },
 
   getIframeUrl() {
-    return `//player.vimeo.com/video/${this.props.videoId}?autoplay=1`;
+    return `//player.vimeo.com/video/${this.props.videoId}?${this.props.vimeoOptions}`;
   },
 
   fetchVimeoData() {
